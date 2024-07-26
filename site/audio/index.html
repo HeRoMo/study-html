@@ -14,24 +14,27 @@
 <div>
   <audio controls src="nagagutsudeodekake.mp3"></audio>
 </div>
-<div>
-  <a href="nagagutsudeodekake.mp3">audio file</a>
-</div>
 
 <h3>WAV</h3>
 <div>
   <audio controls src="fanfare.wav"></audio>
 </div>
-<div>
-  <a href="fanfare.wav">wav file</a>
-</div>
 
 <h3>ogg</h3>
 <div>
-  <audio controls src="rmn_a_005.ogg"></audio>
+  <audio id="ogg" controls src="rmn_a_005.ogg"></audio>
+  <div>
+    <button onclick="setVol('ogg', 0)">音量0%</button>
+    <button onclick="setVol('ogg', 0.5)">音量50%</button>
+    <button onclick="setVol('ogg', 1)">音量100%</button>
+  </div>
 </div>
-<div>
-  <a href="rmn_a_005.ogg">wav file</a>
-</div>
+
 </body>
+<script type="text/javascript">
+  function setVol(id, vol) {
+    var audio = document.getElementById(id);
+    audio.volume = vol;
+  }
+</script>
 </html>
